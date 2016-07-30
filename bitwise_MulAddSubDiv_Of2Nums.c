@@ -27,7 +27,8 @@ int add(int x, int y)
 int sub(int x, int y)
 {
      //to do x-y , so negate and 1 for y so it becomes -y
-    return x+((~y)+1);
+    int negY = add(~y, 1);
+    return add(x,negY);
 }
 
 int main()
