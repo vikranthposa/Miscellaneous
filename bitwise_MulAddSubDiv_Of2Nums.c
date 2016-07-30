@@ -1,18 +1,5 @@
 #include <stdio.h>
 
-int multipyBinary(int x, int y)
-{
-    int result = 0;
-    while (y != 0) {
-        if (y & 1) { //if y is odd then condition
-            result  = add(result,x); //result = result + x; 
-        }
-        x = x << 1;
-        y = y >> 1;
-    }
-    return result;
-}
-
 int add(int x, int y)
 {
     int carry;
@@ -29,6 +16,19 @@ int sub(int x, int y)
      //to do x-y , so negate and 1 for y so it becomes -y
     int negY = add(~y, 1);
     return add(x,negY);
+}
+
+int multipyBinary(int x, int y)
+{
+    int result = 0;
+    while (y != 0) {
+        if (y & 1) { //if y is odd then condition
+            result  = add(result,x); //result = result + x; 
+        }
+        x = x << 1;
+        y = y >> 1;
+    }
+    return result;
 }
 
 int main()
