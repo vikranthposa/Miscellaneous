@@ -4,8 +4,8 @@ int multipyBinary(int x, int y)
 {
     int result = 0;
     while (y != 0) {
-        if (y & 1) {
-            result  = result + x;
+        if (y & 1) { //if y is odd then condition
+            result  = add(result,x); //result = result + x; 
         }
         x = x << 1;
         y = y >> 1;
