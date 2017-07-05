@@ -12,7 +12,7 @@ int main()
     // if we take directly value then it will be typecasted always to value 1 in this case
     //  char c = (char)i;   Here value of  "c" will be alwasy one
     
-    if (*c == 0xFF)
+    if (*c == 0xFE)
         printf("Little endian");
     else
         printf("Big endian");
